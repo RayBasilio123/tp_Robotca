@@ -112,8 +112,6 @@ K_r=[10,0;0,10];
 %Cinematica inversa para o ponto 2
 p0_2=[20.36 ,17.3];
 
-a1=20;
-a2=10;
 
 
 Y=p0_2(1,2);

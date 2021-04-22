@@ -61,14 +61,10 @@ hold on;
 
 %Definição da Trajetória Retilínea
 %%
-% Ponto 1
 p0_r=[-19.75,12.2];
 p1_r=[18.37,19.07];
-
-%Ponto 2 
-%p0_r=[20.36,17.3];
-%p1_r=[-6.165,12.47];
-
+% p0_r=[20.36,17.3];
+% p1_r=[-6.165,12.47];
 Dx=p1_r(1)-p0_r(1);
 Dy=p1_r(2)-p0_r(2);
 A=Dy/Dx;
@@ -105,32 +101,11 @@ K_r=[10,0;0,10];
 
 %Posição Inicial
 %%
-%Cinematica inversa para o ponto 1
+theta1_r=173.6823;%em graus
+theta2_r=5.5812;%em graus
 
-p0_1=[-19.75,12.2];
-
-Y=p0_1(1,2);
-X=p0_1(1,1);
-D = (((X^2)+(Y^2)-(a1^2)-(a2^2))/(2*a1*a2));
-theta2_r = atand(-(sqrt(1-(D^2)))/(D)); 
-TT2= theta2_r+90;
-A=rad2deg(atan2(Y,X));
-
-T=acos(((X^2)+(Y^2)+(a1^2)-(a2^2))/(2*a1*(sqrt((X^2)+(Y^2)))));
-B=rad2deg(T);
-
-TT = A+B;
-disp(TT2);
-theta1_r=TT;%em graus
-theta2_r=TT2;%em graus
-
-%Cinematica inversa para o ponto 1 feito na mão
-% theta1_r=173.6823;%em graus
-% theta2_r=5.5812;%em graus
-
-%Cinematica inversa para o ponto 2 feito na mão
-%  theta1_r=58.7940;%em graus
-%  theta2_r=32.3116;%em graus
+% theta1_r=58.7940;%em graus
+% theta2_r=32.3116;%em graus
 
 theta1_r=deg2rad(theta1_r);%em rad
 theta2_r=deg2rad(theta2_r);%em rad
